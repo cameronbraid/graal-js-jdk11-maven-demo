@@ -111,37 +111,6 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.1</version>
             </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.6.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <arguments>
-                                <argument>--module-path</argument>
-                                <!-- automatically creates the modulepath using all project dependencies, also adding the project build directory -->
-                                <modulepath/>
-                                <argument>-classpath</argument>
-                                <!-- automatically creates the classpath using all project dependencies, also adding the project build directory -->
-                                <classpath/>
-                            </arguments>
-                        </configuration>
-                    </execution>
-                </executions>
-                <configuration>
-                    <executable>${JAVA_HOME}/bin/java</executable>
-                    <arguments>
-                        <argument>-classpath</argument>
-                        <!-- automatically creates the classpath using all project dependencies, also adding the project build directory -->
-                        <classpath/>
-                        <argument>com.mycompany.app.App</argument>
-                    </arguments>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
     <dependencies>
